@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Présentation détaillée du projet AI Model Operations Center."><meta name="theme-color" content="#07101d"><title>AI Model Operations Center | Imadeddine Aklouf</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-header scrolled" id="top"><nav class="nav container"><a class="brand" href="index.html"><span class="brand-mark">IA</span><span>Imadeddine Aklouf</span></a><button class="menu-button" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button><div class="nav-links"><a href="index.html">← Portfolio</a><a href="#contexte">Contexte</a><a href="#architecture">Architecture</a><a href="#resultats">Résultats</a><a class="nav-cta" href="#demonstration">Démonstration</a></div></nav></header>
+  <main>
+    <section class="project-hero section container"><div class="project-breadcrumb reveal"><a href="index.html">Portfolio</a><span>/</span><span>AI Model Operations Center</span></div><div class="project-hero-grid"><div class="reveal"><p class="eyebrow">Projet MLOps · Version 1.0</p><h1>AI Model <span class="gradient-text">Operations Center</span></h1><p class="hero-text">Une plateforme locale de gestion du cycle de vie des modèles, de l'entraînement jusqu'à la promotion et à la surveillance du drift.</p><div class="project-stack large"><span>Python</span><span>FastAPI</span><span>Pydantic</span><span>scikit-learn</span><span>Pandas</span><span>Pytest</span><span>Docker</span></div><div class="hero-actions"><a class="button button-primary" href="#contexte">Explorer le projet ↓</a><a class="button button-secondary disabled-link" href="#">Dépôt bientôt public</a></div></div><div class="project-summary-card reveal"><div><small>Statut</small><strong>Finalisé</strong></div><div><small>Version</small><strong>v1.0.0</strong></div><div><small>Type</small><strong>Machine Learning / MLOps</strong></div><div><small>Rôle</small><strong>Architecture & développement</strong></div></div></div><div class="project-kpis reveal"><div><strong>7</strong><span>étapes MLOps</span></div><div><strong>3</strong><span>familles de candidats</span></div><div><strong>REST</strong><span>API OpenAPI</span></div><div><strong>100 %</strong><span>tests validés</span></div></div></section>
+
+    <section class="section project-doc-section" id="contexte"><div class="container doc-grid"><div class="doc-sidebar reveal"><p class="section-kicker">01. Contexte</p><h2>Le problème traité.</h2></div><div class="doc-content reveal"><p class="doc-lead">Un fichier de modèle ne suffit pas pour disposer d'un système fiable et réutilisable.</p><p>Il faut conserver la configuration, comparer les candidats, enregistrer les artefacts, gouverner les promotions et surveiller l'évolution des données.</p><div class="problem-solution"><article><span>Problème</span><h3>Des expériences difficiles à reproduire</h3><p>Sans registre ni protocole commun, les résultats sont difficiles à comparer.</p></article><article><span>Solution</span><h3>Un cycle MLOps contrôlé</h3><p>Chaque candidat est entraîné, évalué, enregistré puis promu selon des règles explicites.</p></article></div></div></div></section>
+
+    <section class="section container"><div class="section-heading reveal"><p class="section-kicker">02. Objectifs</p><h2>Ce que la plateforme doit accomplir.</h2></div><div class="objective-grid"><article class="reveal"><span>01</span><h3>Créer une baseline</h3><p>Obtenir une référence stable et reproductible.</p></article><article class="reveal"><span>02</span><h3>Comparer les candidats</h3><p>Appliquer un protocole d'évaluation commun.</p></article><article class="reveal"><span>03</span><h3>Gérer les versions</h3><p>Conserver expériences, métriques et artefacts.</p></article><article class="reveal"><span>04</span><h3>Surveiller le drift</h3><p>Détecter l'évolution des données observées.</p></article></div></section>
+
+    <section class="section architecture-section" id="architecture"><div class="container"><div class="section-heading reveal"><p class="section-kicker">03. Architecture</p><h2>Des responsabilités clairement séparées.</h2><p class="section-intro">L'API, les contrats, les services métier, les pipelines ML et la persistance restent indépendants.</p></div><div class="full-architecture reveal"><div class="fa-layer"><span>Utilisation</span><div class="fa-node accent">Swagger · Client HTTP · Tests</div></div><div class="fa-arrow">↓</div><div class="fa-layer"><span>API</span><div class="fa-node">FastAPI et Pydantic</div><div class="agent-grid"><small>Health</small><small>Experiments</small><small>Registry</small><small>Promotion</small><small>Drift</small><small>OpenAPI</small></div></div><div class="fa-arrow">↓</div><div class="fa-layer"><span>Services métier</span><div class="pipeline-row"><small>Évaluation</small><i>→</i><small>Registry</small><i>→</i><small>Promotion</small><i>→</i><small>Drift</small></div></div><div class="fa-arrow">↓</div><div class="fa-layer"><span>Persistance</span><div class="fa-node accent">YAML · JSON · CSV · Joblib · Rapports</div></div></div></div></section>
+
+    <section class="section container"><div class="section-heading reveal"><p class="section-kicker">04. Fonctionnalités</p><h2>Les briques principales.</h2></div><div class="feature-grid"><article class="feature-card reveal"><div class="feature-icon">&gt;_</div><h3>Baseline</h3><p>Prétraitement, entraînement, métriques et artefact de référence.</p></article><article class="feature-card reveal"><div class="feature-icon">ML</div><h3>Candidats</h3><p>Plusieurs familles de modèles pilotées par YAML.</p></article><article class="feature-card reveal"><div class="feature-icon">∑</div><h3>Évaluation</h3><p>Accuracy, précision, recall, F1 et seuils métier.</p></article><article class="feature-card reveal"><div class="feature-icon">DB</div><h3>Model Registry</h3><p>Versions, métriques, états et chemins d'artefacts.</p></article><article class="feature-card reveal"><div class="feature-icon">↑</div><h3>Promotion</h3><p>Passage contrôlé d'un candidat au statut champion.</p></article><article class="feature-card reveal"><div class="feature-icon">∆</div><h3>Drift</h3><p>Comparaison des données récentes à la référence.</p></article></div></section>
+
+    <section class="section workflow-section"><div class="container"><div class="section-heading reveal"><p class="section-kicker">05. Workflow</p><h2>De la donnée au modèle surveillé.</h2></div><div class="workflow reveal"><div><strong>1</strong><span>Données</span></div><i>→</i><div><strong>2</strong><span>Baseline</span></div><i>→</i><div><strong>3</strong><span>Candidats</span></div><i>→</i><div><strong>4</strong><span>Évaluation</span></div><i>→</i><div><strong>5</strong><span>Registry</span></div><i>→</i><div><strong>6</strong><span>Promotion</span></div><i>→</i><div><strong>7</strong><span>Drift</span></div></div></div></section>
+
+    <section class="section container" id="resultats"><div class="section-heading reveal"><p class="section-kicker">06. Résultats</p><h2>Une plateforme locale complète.</h2></div><div class="results-layout"><div class="results-list reveal"><article><span>✓</span><div><h3>Reproductibilité</h3><p>Configurations et chemins centralisés.</p></div></article><article><span>✓</span><div><h3>Traçabilité</h3><p>Versions, expériences, métriques et artefacts reliés.</p></div></article><article><span>✓</span><div><h3>Gouvernance</h3><p>Promotion conditionnée par des règles explicites.</p></div></article><article><span>✓</span><div><h3>Portabilité</h3><p>API conteneurisée et exécution reproductible.</p></div></article></div><div class="artifact-card reveal"><div class="terminal-top"><span></span><span></span><span></span><small>validation</small></div><pre><code>python -m pytest -q
+
+All tests passed
+API status: running
+Registry: available
+Drift service: available</code></pre></div></div></section>
+
+    <section class="section container" id="demonstration"><div class="demo-card reveal"><div><p class="section-kicker">07. Démonstration</p><h2>Lancer la plateforme.</h2><p>Uvicorn expose l'API et sa documentation interactive.</p></div><pre><code># Activer l'environnement
+.venv\Scripts\Activate.ps1
+
+# Tests
+python -m pytest -q
+
+# API
+python -m uvicorn app.main:app \
+  --host 127.0.0.1 \
+  --port 8000 --reload
+
+# Swagger
+http://127.0.0.1:8000/docs</code></pre></div></section>
+    <section class="section container"><div class="project-navigation reveal"><a href="project-semantic-layer-builder.html"><span>← Projet précédent</span><strong>Semantic Layer Builder</strong></a><a href="index.html#projets"><span>Retour</span><strong>Tous les projets →</strong></a></div></section>
+  </main>
+  <footer class="footer"><div class="container footer-inner"><p>© <span id="year"></span> Imadeddine Aklouf.</p><a href="#top">Retour en haut ↑</a></div></footer><script src="script.js"></script>
+</body>
+</html>
