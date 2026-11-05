@@ -43,3 +43,20 @@
 .alt-kpis strong{display:block;font:700 clamp(28px,3.4vw,40px)/1.1 'Space Grotesk';background:linear-gradient(100deg,var(--primary),var(--secondary),var(--violet));background-clip:text;-webkit-background-clip:text;color:transparent;margin-bottom:8px}
 .alt-kpis span{color:var(--muted);font-size:14px}
 @media(max-width:720px){.alt-kpis{grid-template-columns:1fr}}
+
+/* ===== Certifications ===== */
+.cert-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.cert-card{padding:30px;border:1px solid var(--line);border-radius:18px;background:var(--card);transition:.3s}
+.cert-card:hover{transform:translateY(-4px);border-color:rgba(94,234,212,.32)}
+.cert-featured{border-color:rgba(94,234,212,.3);background:linear-gradient(150deg,rgba(94,234,212,.08),transparent 55%),var(--card)}
+.cert-top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.cert-issuer{color:var(--primary);font-size:12px;text-transform:uppercase;letter-spacing:.1em;font-weight:700}
+.cert-count{font-size:11px;color:var(--muted);padding:4px 9px;border:1px solid var(--line);border-radius:99px}
+.cert-card h3{font-family:'Space Grotesk';font-size:21px;margin:16px 0 8px}
+.cert-card p{color:var(--muted);font-size:14px;margin:0 0 14px}
+.cert-card ul{margin:0;padding:0;list-style:none;display:grid;gap:7px}
+.cert-card li{font-size:14px;padding-left:20px;position:relative}
+.cert-card li::before{content:"✓";position:absolute;left:0;color:var(--primary)}
+.cert-verify{display:inline-block;margin-top:4px;font-size:13px;color:var(--primary);border-bottom:1px solid rgba(94,234,212,.4)}
+.cert-more{margin-top:22px;color:var(--muted);font-size:14px;text-align:center}.cert-more strong{color:var(--text)}
+@media(max-width:720px){.cert-grid{grid-template-columns:1fr}.cert-card{padding:24px}}
