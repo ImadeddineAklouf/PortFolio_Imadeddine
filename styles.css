@@ -152,3 +152,15 @@
 @media(max-width:980px){.math-grid,.formula-grid{grid-template-columns:1fr}.maturity{grid-template-columns:1fr 1fr}}
 @media(max-width:720px){.math-card{padding:22px}.maturity{grid-template-columns:1fr}}
 .formula,.math-card,.case-block{min-width:0}.formula .eq{white-space:normal}
+/* ===== Projets académiques ===== */
+.acad-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.acad-card{display:flex;flex-direction:column;padding:28px;border:1px solid var(--line);border-radius:20px;background:var(--card);transition:.3s;min-width:0}
+.acad-card:hover{transform:translateY(-4px);border-color:rgba(94,234,212,.35)}
+.acad-top{display:flex;justify-content:space-between;align-items:center}
+.acad-tag{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--secondary);font-weight:700}
+.acad-card h3{font-family:'Space Grotesk';font-size:20px;line-height:1.25;margin:14px 0 10px}
+.acad-card p{color:var(--muted);font-size:14px;margin:0 0 14px;flex:1}
+.acad-card p strong{color:var(--text)}
+.acad-math{font-size:13px;color:#d3dfeb;padding:10px 12px;border-radius:10px;background:rgba(94,234,212,.06);border:1px solid rgba(94,234,212,.15)}
+.acad-math span{color:var(--primary);font-weight:700;margin-right:4px}
+@media(max-width:980px){.acad-grid{grid-template-columns:1fr}}
