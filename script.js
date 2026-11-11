@@ -42,3 +42,11 @@ if (reducedMotion || !('IntersectionObserver' in window)) {
 
 const year = document.getElementById('year');
 if (year) year.textContent = new Date().getFullYear();
+// Retour en haut : l'en-tête est fixe, on remonte donc explicitement en haut de la page
+document.querySelectorAll('a[href="#top"]').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: reducedMotion ? 'auto' : 'smooth' });
+    history.replaceState(null, '', window.location.pathname);
+  });
+});
