@@ -118,3 +118,37 @@
 .contact-actions{flex-wrap:wrap}
 @media(max-width:980px){.timeline{grid-template-columns:repeat(3,1fr);row-gap:18px}.layers,.immar-grid{grid-template-columns:1fr}.case-grid{grid-template-columns:1fr}.chain-row{grid-template-columns:1fr}.chain-step::after{display:none}.trace{grid-template-columns:1fr}.trace-link{transform:rotate(90deg);text-align:center}}
 @media(max-width:720px){.hero-kpis{grid-template-columns:1fr}.timeline{grid-template-columns:1fr}.layer{padding:22px}.proof-table{font-size:13px}.proof-table td,.proof-table th{padding:10px}}
+/* ===== Maths ===== */
+.math-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.math-card{padding:30px;border:1px solid var(--line);border-radius:20px;background:var(--card);transition:.3s}
+.math-card:hover{border-color:rgba(94,234,212,.32);transform:translateY(-3px)}
+.math-sym{display:inline-block;padding:6px 12px;border-radius:10px;background:rgba(94,234,212,.08);color:var(--primary);font:700 15px 'Space Grotesk';letter-spacing:.02em}
+.math-card h3{font-family:'Space Grotesk';font-size:20px;margin:16px 0 4px}
+.math-src{margin:0 0 10px!important;font-size:12px!important;color:var(--secondary)!important;text-transform:uppercase;letter-spacing:.06em}
+.math-card>p{color:var(--muted);font-size:14.5px;margin:0 0 12px}
+.math-card ul{margin:0;padding-left:18px;display:grid;gap:7px;font-size:14px;color:#d3dfeb}
+.math-card li::marker{color:var(--primary)}
+.math-card a,.math-note a{color:var(--primary);border-bottom:1px solid rgba(94,234,212,.35)}
+.math-note{margin-top:22px;text-align:center;color:var(--muted);font-size:15px}.math-note strong{color:var(--text)}
+.case-cta{margin-top:26px;text-align:center}
+/* ===== Pages projet : formules ===== */
+.formula-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.formula{padding:24px;border:1px solid var(--line);border-radius:18px;background:var(--card)}
+.formula small{display:block;color:var(--primary);text-transform:uppercase;letter-spacing:.1em;font-size:11px;font-weight:700;margin-bottom:10px}
+.formula .eq{font:600 19px 'Space Grotesk';color:var(--text);margin:0 0 10px;overflow-x:auto;white-space:nowrap}
+.formula p{margin:0;color:var(--muted);font-size:14px}
+.maturity{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.maturity div{padding:20px 16px;border-radius:16px;border:1px solid var(--line);background:var(--card)}
+.maturity div:nth-child(n+3){border-color:rgba(94,234,212,calc(.15 + .1 * var(--i,0)))}
+.maturity strong{display:block;font:700 22px 'Space Grotesk';color:var(--primary)}
+.maturity h4{font-family:'Space Grotesk';font-size:15px;margin:6px 0 6px}
+.maturity p{margin:0;color:var(--muted);font-size:13px;line-height:1.45}
+.role-table{width:100%;border-collapse:collapse;font-size:14px}
+.role-table th{text-align:left;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--primary);padding:12px 14px;border-bottom:1px solid var(--line)}
+.role-table td{padding:13px 14px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--muted)}
+.role-table td:first-child{color:var(--text);font-weight:600;font-family:'Space Grotesk'}
+.role-table tr:last-child td{border-bottom:0}
+.conf-note{margin-top:20px;padding:16px 20px;border:1px dashed var(--line);border-radius:14px;color:var(--muted);font-size:13px}
+@media(max-width:980px){.math-grid,.formula-grid{grid-template-columns:1fr}.maturity{grid-template-columns:1fr 1fr}}
+@media(max-width:720px){.math-card{padding:22px}.maturity{grid-template-columns:1fr}}
+.formula,.math-card,.case-block{min-width:0}.formula .eq{white-space:normal}

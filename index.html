@@ -18,7 +18,7 @@
       <a class="brand" href="#top"><span class="brand-mark">IA</span><span>Imadeddine Aklouf</span></a>
       <button class="menu-button" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
       <div class="nav-links">
-        <a href="#apropos">À propos</a><a href="#alternance">Renault</a><a href="#immar">IMMAR</a><a href="#projets">Projets</a><a href="#competences">Compétences</a><a class="nav-cta" href="#contact">Contact</a>
+        <a href="#apropos">À propos</a><a href="#maths">Maths</a><a href="#alternance">Renault</a><a href="#immar">IMMAR</a><a href="#projets">Projets</a><a class="nav-cta" href="#contact">Contact</a>
       </div>
     </nav>
   </header>
@@ -30,11 +30,6 @@
         <h1>Je conçois des systèmes d'IA <span class="gradient-text">mesurés, testés et traçables</span>.</h1>
         <p class="hero-text">Étudiant en 3ᵉ année de BUT Informatique (coloration Data/IA) et apprenti Catalyste IA chez <strong>Renault Group</strong>. J'ai livré un classifieur NLP à <strong>95&nbsp;% d'accuracy</strong> sur des données clients réelles, et je travaille aujourd'hui sur l'IA appliquée à toute la chaîne de livraison logicielle.</p>
         <div class="hero-actions"><a class="button button-primary" href="#alternance">Mes réalisations <span aria-hidden="true">↓</span></a><a class="button button-secondary" href="CV_Imadeddine_Aklouf.pdf" target="_blank" rel="noopener">Télécharger mon CV ↗</a></div>
-        <div class="hero-kpis">
-          <div><strong>95&nbsp;%</strong><span>d'accuracy NLP, pour un objectif de 90&nbsp;%</span></div>
-          <div><strong>23 000+</strong><span>verbatims clients classés</span></div>
-          <div><strong>300+</strong><span>tests automatisés sur mes projets</span></div>
-        </div>
       </div>
       <div class="hero-visual reveal" aria-label="Présentation">
         <div class="profile-card"><div class="profile-monogram">IA</div><p class="profile-role">Apprenti Catalyste IA · Renault Group</p><h2>Imadeddine Aklouf</h2><p>Je construis, je mesure, j'industrialise&nbsp;: du modèle NLP livré à un client à l'IA au service du cycle de développement logiciel.</p><div class="profile-tags"><span>NLP</span><span>RAG</span><span>Multi-agents</span><span>MLOps</span><span>Spec-Driven Dev.</span><span>MCP</span></div></div>
@@ -75,9 +70,21 @@
       </ol>
     </section>
 
+
+    <section class="section container" id="maths">
+      <div class="section-heading reveal"><p class="section-kicker">03. Fondamentaux mathématiques</p><h2>Les mathématiques derrière mes modèles.</h2><p class="section-intro">Trois ans de mathématiques en BUT Informatique, que je mobilise concrètement dans mes projets. Pour chaque domaine&nbsp;: ce que j'ai étudié, et où je l'ai appliqué.</p></div>
+      <div class="math-grid">
+        <article class="math-card reveal"><div class="math-sym">Ax = b</div><h3>Algèbre linéaire et méthodes numériques</h3><p class="math-src">Outils mathématiques fondamentaux · Méthodes numériques</p><p>Vecteurs, matrices, systèmes linéaires, moindres carrés, normalisation des données.</p><ul><li>Régression linéaire&nbsp;: ajuster les coefficients par moindres carrés (<a href="project-housing-price-prediction.html">prix de logements</a>).</li><li>Standardisation des variables&nbsp;: z = (x − μ) / σ.</li><li>Embeddings&nbsp;: chaque document devient un vecteur, la recherche est un calcul de distance (<a href="project-semanticops-rag-copilot.html">RAG Copilot</a>, bases vectorielles).</li></ul></article>
+        <article class="math-card reveal"><div class="math-sym">E[X] · σ²</div><h3>Probabilités et statistiques</h3><p class="math-src">Statistiques descriptives · Probabilités</p><p>Lois, espérance, variance, estimation, mesure de l'erreur.</p><ul><li>Validation croisée à 5 plis&nbsp;: moyenne et écart-type du R² (<a href="project-housing-price-prediction.html">prix de logements</a>).</li><li>RMSE et R² pour juger une régression&nbsp;; accuracy de 95&nbsp;% mesurée sur 23 000+ verbatims (<a href="#immar">IMMAR</a>).</li><li>Random Forest&nbsp;: moyenne de 200 arbres entraînés sur des échantillons aléatoires, pour réduire la variance.</li></ul></article>
+        <article class="math-card reveal"><div class="math-sym">min f(θ)</div><h3>Optimisation</h3><p class="math-src">Méthodes d'optimisation · Optimisation pour l'aide à la décision</p><p>Minimiser une fonction sous contraintes, comparer des solutions.</p><ul><li>Entraîner un modèle, c'est minimiser une erreur&nbsp;: somme des carrés pour la régression, entropie croisée pour la classification.</li><li>Choisir un modèle, c'est arbitrer&nbsp;: précision, coût, robustesse (architecture hybride d'<a href="#immar">IMMAR</a>).</li></ul></article>
+        <article class="math-card reveal"><div class="math-sym">G = (V, E)</div><h3>Graphes et mathématiques discrètes</h3><p class="math-src">Mathématiques discrètes · Graphes · Automates et langages</p><p>Logique, ensembles, graphes orientés, plus courts chemins.</p><ul><li>Un système multi-agents s'organise comme un graphe de dépendances entre agents (<a href="project-semantic-layer-builder.html">Semantic Layer Builder</a>).</li><li>Le Spec-Driven Development découpe un besoin en tâches ordonnées par leurs dépendances (<a href="project-renault-ai-sdlc.html">Renault</a>).</li></ul></article>
+      </div>
+      <p class="math-note reveal">En 3ᵉ année, je poursuis avec les <strong>modélisations mathématiques</strong>, et je veux aller plus loin en cycle ingénieur.</p>
+    </section>
+
     <section class="section alt-section" id="alternance">
       <div class="container">
-        <div class="section-heading reveal"><p class="section-kicker">03. Alternance · Renault Group</p><h2>De l'IA pour coder <span class="gradient-text">à l'IA pour livrer</span>.</h2><p class="section-intro">Depuis septembre 2026, je suis apprenti Catalyste IA dans la Supply Chain IT de Renault Group&nbsp;: mon rôle est d'identifier des cas d'usage de l'IA et de développer les solutions associées.</p></div>
+        <div class="section-heading reveal"><p class="section-kicker">04. Alternance · Renault Group</p><h2>De l'IA pour coder <span class="gradient-text">à l'IA pour livrer</span>.</h2><p class="section-intro">Depuis septembre 2026, je suis apprenti Catalyste IA dans la Supply Chain IT de Renault Group&nbsp;: mon rôle est d'identifier des cas d'usage de l'IA et de développer les solutions associées.</p></div>
 
         <div class="layers reveal">
           <article class="layer"><span class="layer-tag">A · Le programme · travail collectif</span><h3>Étendre l'IA à toute la chaîne de livraison</h3><p>La Supply Chain IT mène un programme de transformation pour que l'IA n'accélère plus seulement l'écriture du code, mais toute la chaîne&nbsp;: du besoin métier jusqu'à la maintenance, sur plusieurs équipes et plusieurs sites.</p></article>
@@ -115,11 +122,12 @@
           <p>Accélérer une seule étape ne suffit pas&nbsp;: il faut raisonner sur toute la chaîne. Et la qualité du code généré par l'IA dépend d'abord de la qualité de la spécification qu'on lui donne.</p>
           <small>Projet interne&nbsp;: présenté volontairement à un niveau conceptuel, sans données de l'entreprise.</small>
         </div>
+        <div class="case-cta reveal"><a class="button button-primary" href="project-renault-ai-sdlc.html">Lire l'étude de cas complète →</a></div>
       </div>
     </section>
 
     <section class="section container" id="immar">
-      <div class="section-heading reveal"><p class="section-kicker">04. Stage · IMMAR · avril – juin 2026</p><h2>Un modèle livré au-delà de son objectif.</h2><p class="section-intro">Classer automatiquement plus de 23 000 verbatims clients en espagnol pour un distributeur automobile d'Amérique latine, avec un objectif fixé à 90&nbsp;% d'accuracy.</p></div>
+      <div class="section-heading reveal"><p class="section-kicker">05. Stage · IMMAR · avril – juin 2026</p><h2>Un modèle livré au-delà de son objectif.</h2><p class="section-intro">Classer automatiquement plus de 23 000 verbatims clients en espagnol pour un distributeur automobile d'Amérique latine, avec un objectif fixé à 90&nbsp;% d'accuracy.</p></div>
       <div class="alt-kpis reveal" style="margin:0 0 26px">
         <div><strong>95&nbsp;%</strong><span>d'accuracy, pour un objectif de 90&nbsp;%</span></div>
         <div><strong>23 000+</strong><span>verbatims clients réels, en espagnol</span></div>
@@ -148,7 +156,7 @@
 
     <section class="section projects-home" id="projets">
       <div class="container">
-      <div class="section-heading reveal"><p class="section-kicker">05. Projets personnels</p><h2>Construire, tester, conteneuriser.</h2><p class="section-intro">Des projets conçus de bout en bout en dehors de mes cours, chacun testé et conteneurisé. Chaque carte ouvre une page dédiée.</p></div>
+      <div class="section-heading reveal"><p class="section-kicker">06. Projets personnels</p><h2>Construire, tester, conteneuriser.</h2><p class="section-intro">Des projets conçus de bout en bout en dehors de mes cours. Chaque carte ouvre une page dédiée.</p></div>
       <div class="project-list">
           <a class="project-list-card reveal" href="project-semantic-layer-builder.html" aria-label="Découvrir Semantic Layer Builder">
             <div class="project-list-number">01</div>
@@ -165,31 +173,14 @@
             <div class="project-list-content"><div class="project-list-top"><span class="project-status">MLOps · v1.0</span><span class="project-arrow">↗</span></div><h3>AI Model Operations Center</h3><p>Plateforme qui couvre le cycle de vie d'un modèle de Machine Learning&nbsp;: entraînement, évaluation, registre, promotion et surveillance.</p><div class="project-stack"><span>Python</span><span>FastAPI</span><span>scikit-learn</span><span>Pytest</span><span>Docker</span></div></div>
             <div class="project-list-metrics"><div><strong>7</strong><span>étapes MLOps</span></div><div><strong>REST</strong><span>API documentée</span></div></div>
           </a>
-          <a class="project-list-card reveal project-blue" href="https://github.com/AKLOUF/Prediction-du-prix-de-logements" target="_blank" rel="noopener noreferrer" aria-label="Voir le dépôt Prédiction du prix de logements">
+          <a class="project-list-card reveal project-blue" href="project-housing-price-prediction.html" aria-label="Découvrir Prédiction du prix de logements">
             <div class="project-list-number">04</div>
             <div class="project-list-content"><div class="project-list-top"><span class="project-status">ML supervisé</span><span class="project-arrow">↗</span></div><h3>Prédiction du prix de logements</h3><p>Comparaison d'une régression linéaire et d'un Random Forest sur California Housing, avec validation croisée et évaluation RMSE / R².</p><div class="project-stack"><span>Python</span><span>scikit-learn</span><span>Pandas</span></div></div>
-            <div class="project-list-metrics"><div><strong>2</strong><span>modèles comparés</span></div></div>
+            <div class="project-list-metrics"><div><strong>2</strong><span>modèles</span></div><div><strong>5</strong><span>plis de CV</span></div><div><strong>200</strong><span>arbres</span></div></div>
           </a>
       </div>
       <div class="repo-links reveal"><span>Code source</span><a href="https://github.com/ImadeddineAklouf/Semantique_layer_agent" target="_blank" rel="noopener noreferrer">Semantic Layer Builder ↗</a><a href="https://github.com/ImadeddineAklouf/SemanticOps-rag-copilot" target="_blank" rel="noopener noreferrer">SemanticOps RAG Copilot ↗</a><a href="https://github.com/ImadeddineAklouf/ai-model-operations-center" target="_blank" rel="noopener noreferrer">AI Model Operations Center ↗</a><a href="https://github.com/AKLOUF/Prediction-du-prix-de-logements" target="_blank" rel="noopener noreferrer">Prédiction de prix ↗</a></div>
       </div>
-    </section>
-
-    <section class="section container" id="competences">
-      <div class="section-heading reveal"><p class="section-kicker">06. Compétences</p><h2>Ce que je sais faire, et où le vérifier.</h2><p class="section-intro">Chaque compétence est reliée à une réalisation que vous pouvez consulter.</p></div>
-      <div class="proof-wrap reveal"><table class="proof-table">
-        <thead><tr><th>Compétence</th><th>Technologies</th><th>Preuve</th></tr></thead>
-        <tbody>
-          <tr><td>NLP et Transformers</td><td>Hugging Face, BERT, BETO, mDeBERTa, XLM-RoBERTa</td><td><a href="#immar">Stage IMMAR</a></td></tr>
-          <tr><td>Évaluation de modèles</td><td>Accuracy, validation croisée, RMSE, R²</td><td><a href="#immar">IMMAR</a> · <a href="https://github.com/AKLOUF/Prediction-du-prix-de-logements" target="_blank" rel="noopener noreferrer">Prix de logements</a></td></tr>
-          <tr><td>Architecture multi-agents</td><td>Google ADK, orchestration d'agents</td><td><a href="project-semantic-layer-builder.html">Semantic Layer Builder</a></td></tr>
-          <tr><td>RAG et embeddings</td><td>ChromaDB, embeddings multilingues, Groq</td><td><a href="project-semanticops-rag-copilot.html">SemanticOps RAG Copilot</a></td></tr>
-          <tr><td>MLOps</td><td>scikit-learn, registre et surveillance de modèles</td><td><a href="project-ai-model-operations-center.html">AI Model Operations Center</a></td></tr>
-          <tr><td>API et industrialisation</td><td>Python, FastAPI, Flask, Pydantic, Docker, Git</td><td><a href="#immar">IMMAR</a> · <a href="#projets">projets</a></td></tr>
-          <tr><td>Tests automatisés</td><td>Pytest, 300+ tests</td><td><a href="#projets">Projets personnels</a></td></tr>
-          <tr><td>IA pour le cycle logiciel</td><td>Spec-Driven Development, Spec Kit, MCP, Jira</td><td><a href="#alternance">Alternance Renault</a></td></tr>
-        </tbody>
-      </table></div>
     </section>
 
     <section class="section container" id="certifications">

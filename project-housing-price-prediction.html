@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Projet de Machine Learning supervisé : prédiction du prix de logements en Californie, régression linéaire et Random Forest."><meta name="theme-color" content="#07101d"><title>Prédiction du prix de logements | Imadeddine Aklouf</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-header scrolled" id="top"><nav class="nav container"><a class="brand" href="index.html"><span class="brand-mark">IA</span><span>Imadeddine Aklouf</span></a><button class="menu-button" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button><div class="nav-links"><a href="index.html">← Portfolio</a><a href="#contexte">Contexte</a><a href="#maths">Mathématiques</a><a href="#pipeline">Pipeline</a><a class="nav-cta" href="#demonstration">Démonstration</a></div></nav></header>
+  <main>
+    <section class="project-hero section container"><div class="project-breadcrumb reveal"><a href="index.html">Portfolio</a><span>/</span><span>Prédiction du prix de logements</span></div><div class="project-hero-grid"><div class="reveal"><p class="eyebrow">Projet Machine Learning supervisé</p><h1>Prédiction du prix <span class="gradient-text">de logements</span></h1><p class="hero-text">Un pipeline de régression complet, de la préparation des données à l'inférence, pour estimer la valeur médiane des logements de Californie et comparer deux familles de modèles.</p><div class="project-stack large"><span>Python</span><span>scikit-learn</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Joblib</span></div><div class="hero-actions"><a class="button button-primary" href="#contexte">Explorer le projet ↓</a><a class="button button-secondary" href="https://github.com/AKLOUF/Prediction-du-prix-de-logements" target="_blank" rel="noopener noreferrer">Voir le dépôt GitHub ↗</a></div></div><div class="project-summary-card reveal"><div><small>Type</small><strong>Régression supervisée</strong></div><div><small>Données</small><strong>California Housing</strong></div><div><small>Modèles</small><strong>Linéaire · Random Forest</strong></div><div><small>Rôle</small><strong>Conception &amp; développement</strong></div></div></div><div class="project-kpis reveal"><div><strong>20 640</strong><span>districts dans le jeu de données</span></div><div><strong>8</strong><span>variables explicatives</span></div><div><strong>5</strong><span>plis de validation croisée</span></div><div><strong>200</strong><span>arbres dans la forêt</span></div></div></section>
+
+    <section class="section project-doc-section" id="contexte"><div class="container doc-grid"><div class="doc-sidebar reveal"><p class="section-kicker">01. Contexte</p><h2>Le problème traité.</h2></div><div class="doc-content reveal"><p class="doc-lead">Estimer le prix d'un logement à partir de quelques caractéristiques de son quartier.</p><p>Le jeu de données California Housing décrit 20 640 districts de Californie&nbsp;: revenu médian, âge des logements, nombre de pièces, population, latitude et longitude. La cible est la valeur médiane des maisons de chaque district.</p><div class="problem-solution"><article><span>Question</span><h3>Un modèle simple suffit-il&nbsp;?</h3><p>Une relation linéaire entre les variables et le prix capture-t-elle l'essentiel du phénomène&nbsp;?</p></article><article><span>Démarche</span><h3>Comparer, puis mesurer</h3><p>Entraîner un modèle linéaire et une forêt aléatoire avec le même protocole, et les juger sur les mêmes métriques.</p></article></div></div></div></section>
+
+    <section class="section container"><div class="section-heading reveal"><p class="section-kicker">02. Objectifs</p><h2>Ce que le pipeline doit accomplir.</h2></div><div class="objective-grid"><article class="reveal"><span>01</span><h3>Préparer les données</h3><p>Séparer apprentissage et test, standardiser les variables.</p></article><article class="reveal"><span>02</span><h3>Comparer deux modèles</h3><p>Régression linéaire et Random Forest, même protocole.</p></article><article class="reveal"><span>03</span><h3>Évaluer honnêtement</h3><p>RMSE, R² sur le test et validation croisée à 5 plis.</p></article><article class="reveal"><span>04</span><h3>Expliquer et réutiliser</h3><p>Importance des variables, modèle sauvegardé pour l'inférence.</p></article></div></section>
+
+    <section class="section architecture-section" id="maths"><div class="container"><div class="section-heading reveal"><p class="section-kicker">03. Les mathématiques</p><h2>Ce qui se passe sous le capot.</h2><p class="section-intro">Ce projet m'a permis d'appliquer directement l'algèbre linéaire, les statistiques et l'optimisation vues en BUT.</p></div><div class="formula-grid">
+      <div class="formula reveal"><small>Standardisation</small><p class="eq">z = (x − μ) / σ</p><p>Chaque variable est centrée et réduite (StandardScaler), pour qu'aucune ne domine les autres à cause de son échelle.</p></div>
+      <div class="formula reveal"><small>Régression linéaire</small><p class="eq">ŷ = β₀ + β₁x₁ + … + β₈x₈</p><p>Les coefficients β minimisent la somme des carrés des erreurs Σ(yᵢ − ŷᵢ)²&nbsp;: un problème d'optimisation résolu par l'algèbre linéaire (moindres carrés).</p></div>
+      <div class="formula reveal"><small>Random Forest</small><p class="eq">ŷ = (1/200) Σ ŷₜ(x)</p><p>200 arbres de décision, chacun entraîné sur un échantillon aléatoire des données&nbsp;; la moyenne de leurs prédictions réduit la variance du modèle.</p></div>
+      <div class="formula reveal"><small>Métriques</small><p class="eq">RMSE = √( (1/n) Σ(yᵢ − ŷᵢ)² ) · R² = 1 − SSres / SStot</p><p>Le RMSE mesure l'erreur moyenne dans l'unité du prix&nbsp;; le R² mesure la part de la variance expliquée par le modèle.</p></div>
+      <div class="formula reveal"><small>Validation croisée</small><p class="eq">R²cv = moyenne ± écart-type sur 5 plis</p><p>Le jeu d'apprentissage est découpé en 5 parties&nbsp;: le modèle est entraîné 5 fois, ce qui donne une estimation plus fiable et sa dispersion.</p></div>
+      <div class="formula reveal"><small>Interprétation</small><p class="eq">importance(xⱼ) · coefficients βⱼ</p><p>Le pipeline trace l'importance des variables (forêt) ou les coefficients (régression) pour comprendre ce qui pèse sur le prix.</p></div>
+    </div></div></section>
+
+    <section class="section workflow-section" id="pipeline"><div class="container"><div class="section-heading reveal"><p class="section-kicker">04. Pipeline</p><h2>Un code organisé comme un vrai projet.</h2><p class="section-intro">Chaque étape vit dans son module&nbsp;: préparation, entraînement, évaluation, puis inférence en lot.</p></div><div class="workflow reveal"><div><strong>1</strong><span>Chargement</span></div><i>→</i><div><strong>2</strong><span>Split 80 / 20</span></div><i>→</i><div><strong>3</strong><span>Standardisation</span></div><i>→</i><div><strong>4</strong><span>Entraînement</span></div><i>→</i><div><strong>5</strong><span>Évaluation</span></div><i>→</i><div><strong>6</strong><span>Artefacts</span></div><i>→</i><div><strong>7</strong><span>Inférence</span></div></div></div></section>
+
+    <section class="section container" id="resultats"><div class="section-heading reveal"><p class="section-kicker">05. Livrables</p><h2>Ce que produit une exécution.</h2></div><div class="results-layout"><div class="results-list reveal"><article><span>✓</span><div><h3>metrics.json</h3><p>RMSE, R² sur le test, moyenne et écart-type du R² en validation croisée.</p></div></article><article><span>✓</span><div><h3>feature_importance.png</h3><p>Le poids de chaque variable dans la prédiction.</p></div></article><article><span>✓</span><div><h3>model.joblib · scaler.joblib</h3><p>Le modèle et la normalisation sauvegardés, réutilisables pour l'inférence.</p></div></article><article><span>✓</span><div><h3>Paramétrable</h3><p>Choix du modèle, de la taille du test et de la graine aléatoire en ligne de commande.</p></div></article></div><div class="artifact-card reveal"><div class="terminal-top"><small>structure</small></div><pre><code>src/
+├── preprocessing.py
+├── model_training.py
+└── evaluation.py
+main.py
+inference.py
+notebook/housing_prediction.ipynb
+artifacts/  (généré)</code></pre></div></div></section>
+
+    <section class="section container" id="demonstration"><div class="demo-card reveal"><div><p class="section-kicker">06. Démonstration</p><h2>Lancer le pipeline.</h2><p>Une commande entraîne, évalue et sauvegarde le modèle choisi.</p></div><pre><code># Installer les dépendances
+pip install -r requirements.txt
+
+# Random Forest, 20&nbsp;% de test
+python main.py --model rf --testsize 0.2
+
+# Régression linéaire
+python main.py --model lr</code></pre></div></section>
+    <section class="section container"><div class="project-navigation reveal"><a href="project-ai-model-operations-center.html"><span>← Projet précédent</span><strong>AI Model Operations Center</strong></a><a href="project-renault-ai-sdlc.html"><span>Étude de cas</span><strong>Alternance Renault →</strong></a></div></section>
+
+  </main>
+  <footer class="footer"><div class="container footer-inner"><p>© <span id="year"></span> Imadeddine Aklouf.</p><a href="#top">Retour en haut ↑</a></div></footer><script src="script.js"></script>
+</body>
+</html>
